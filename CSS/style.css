@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap');
+:root {
+  --clr-primary-1: #293d4b;
+  --clr-primary-2: #ebf3eb;
+  --clr-primary-3: #8e9a92;
+  --clr-primary-4: #836853;
+  --clr-primary-5: #b9c6c1;
+  --clr-primary-6: #988167;
+  --clr-primary-7: #bea18a;
+  --clr-primary-8: #6b847c;
+  --clr-primary-9: #afabad;
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-transparent-black: rgb(0, 0, 0, 0.2);
+  --clr-pink: rgb(255, 191, 202);
+  --clr-primary-color: rgb(3, 23, 23);
+  --logo-color: rgb(255, 10, 10);
+  --background: #ebf3eb;
+  --transition: all 400ms ease;
+  --spacing: 0.1rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --container-width-lg: 82%;
+  --container-width-md: 90%;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: 0;
+  text-decoration: none;
+  overflow: hidden;
+}
+body {
+  font-family: 'Merriweather', serif;
+  color: var(--clr-black);
+  line-height: 1.7;
+  background: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========GENERAL CLASSES======= */
+.container {
+  width: var(--container-width-lg);
+  margin-inline: auto;
+  max-width: 1920px;
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--clr-grey-1);
+  background: var(--clr-white);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--clr-primary-6);
+  transition: var(--transition);
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  margin-top: 0;
+}
+
+.btn.sm {
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 4rem;
+}
+
+.btn:hover {
+  background: var(--clr-primary-6);
+  color: var(--clr-white);
+  border: transparent;
+}
+.btn-primary {
+  background: var(--clr-primary-6);
+  color: var(--clr-grey-1);
+}
+img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+/* =====MEDIA QUERRIES(MEDIUM)====== */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+/* =====MEDIA QUERRIES(SMALL)====== */
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.1rem;
+  }
+}
