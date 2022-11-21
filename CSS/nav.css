@@ -1,14 +1,36 @@
+:root {
+  --clr-primary-1: #2c2b2b;
+  --clr-primary-2: #ee3b3b;
+  --clr-primary-3: #f4f2f1;
+  --clr-primary-5: #969696;
+  --clr-primary-6: #eb9b94;
+  --clr-primary-7: #cb856b;
+  --clr-primary-8: #c1c1c1;
+  --clr-primary-9: #edbaa3;
+  --clr-primary-10: #729caf;
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-transparent-black: rgb(0, 0, 0, 0.2);
+  --clr-pink: rgb(255, 191, 202);
+  --clr-primary-color: rgb(3, 23, 23);
+  --logo-color: rgb(255, 10, 10);
+  --background: #ebf3eb;
+  --transition: all 400ms ease;
+  --spacing: 0.1rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --container-width-lg: 82%;
+  --container-width-md: 90%;
+}
 .nav-header {
-  background: rgb(39, 39, 68);
-  color: white;
+  color: var(--clr-primary-1);
   height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-.header h2 {
-  font-size: 30px;
-  letter-spacing: 2px;
+  padding: 2rem;
+  overflow: hidden;
 }
 .links {
   display: flex;
@@ -18,9 +40,13 @@
   font-size: 14px;
 }
 .links a {
-  color: white;
+  color: var(--clr-primary-5);
   text-decoration: none;
   letter-spacing: 3px;
+  font-weight: 600;
+}
+.links a:hover {
+  color: var(--clr-primary-1);
 }
 .burger {
   display: none;
@@ -32,7 +58,7 @@
   margin: 5px;
 }
 .nav-active {
-  transform: translateX(0%);
+  visibility: visible;
 }
 @media (max-width: 1024px) {
   .links {
@@ -50,7 +76,7 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    transform: translateX(100%);
+    visibility: hidden;
     transition: transform 0.5s ease-in;
   }
   .burger {
