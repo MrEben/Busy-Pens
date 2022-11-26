@@ -1,0 +1,188 @@
+:root {
+  --clr-primary-1: #2c2b2b;
+  --clr-primary-2: #ee3b3b;
+  --clr-primary-3: #f4f2f1;
+  --clr-primary-5: #969696;
+  --clr-primary-6: #eb9b94;
+  --clr-primary-7: #cb856b;
+  --clr-primary-8: #c1c1c1;
+  --clr-primary-9: #edbaa3;
+  --clr-primary-10: #729caf;
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-transparent-black: rgb(0, 0, 0, 0.2);
+  --clr-pink: rgb(255, 191, 202);
+  --clr-primary-color: rgb(3, 23, 23);
+  --background: #f4f2f1;
+  --transition: all 400ms ease;
+  --spacing: 0.1rem;
+  --radius: 0.5rem;
+  --main-radius: 5rem 5rem 0 0;
+  --minor-radius: 3rem 3rem 0 0;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --btn-red-shadow: 0 5px 15px var(--clr-primary-6);
+  --btn-dark-shadow: 0 5px 10px var(--clr-primary-8);
+  --container-width-lg: 82%;
+  --container-width-md: 90%;
+}
+footer {
+  background: var(--clr-primary-1);
+  font-size: 0.9rem;
+  display: grid;
+  height: fit-content;
+  border-radius: var(--main-radius);
+}
+.footer-links {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 30% 25% 20% 25%;
+  gap: 1rem;
+  margin: 2rem;
+  text-transform: capitalize;
+}
+.footer-links h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+.footer-links ul li a,
+.footer-links h5 {
+  color: var(--clr-primary-10);
+}
+.logo-message {
+  display: inline-block;
+}
+.logo-message img {
+  margin-top: 0.5rem;
+  height: 4rem;
+  width: 80%;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: var(--clr-primary-10);
+  color: white;
+  padding: 16px 0;
+  font-size: 16px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  text-transform: capitalize;
+}
+.droplinks {
+  display: grid;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--clr-primary-10);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: var(--clr-primary-4);
+}
+.newsleter-sec .user-email {
+  margin-top: 0.8rem;
+  background: var(--clr-grey-8);
+  resize: none;
+  border-radius: 2rem 0 0 2rem;
+  border: transparent;
+  padding: 0.5rem;
+  color: var(--clr-black);
+  width: 70%;
+}
+.newsletter-btn {
+  background: var(--clr-primary-2);
+  padding: 0.6rem;
+  border: transparent;
+  border-radius: 2rem;
+  margin-left: -1rem;
+  color: var(--clr-white);
+  cursor: pointer;
+}
+.footer-copyrights {
+  background: var(--clr-black);
+  height: 3rem;
+  text-transform: capitalize;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  place-items: center;
+}
+.footer-copyrights span {
+  color: var(--clr-grey-8);
+}
+/* =====MEDIA QUERRIES(MEDIUM)====== */
+
+@media screen and (max-width: 1024px) {
+  .social-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .logo-message img {
+    height: 2.5rem;
+  }
+  .newsletter-btn {
+    margin-left: 3rem;
+  }
+  .newsleter-sec .user-email {
+    border-radius: 0;
+    width: 90%;
+  }
+}
+/* =====MEDIA QUERRIES(SMALL)====== */
+
+@media screen and (max-width: 620px) {
+  .dropdown {
+    display: inline-block;
+  }
+  .footer-copyrights {
+    grid-template-columns: 1fr;
+  }
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+  .company-values,
+  .company-footer-links {
+    display: none;
+  }
+  .logo-message img {
+    display: none;
+  }
+  .newsleter-sec .user-email {
+    border-radius: 2rem 0 0 2rem;
+    width: 60%;
+  }
+  .newsletter-btn {
+    margin-left: -1rem;
+  }
+}

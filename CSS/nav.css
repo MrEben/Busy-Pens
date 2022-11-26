@@ -27,7 +27,8 @@
   color: var(--clr-primary-1);
   height: 50px;
   display: flex;
-  justify-content: space-around;
+  gap: 20%;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
   overflow: hidden;
@@ -48,24 +49,45 @@
 .links a:hover {
   color: var(--clr-primary-1);
 }
+.logo-img {
+  width: 6rem;
+}
 .burger {
   display: none;
 }
 .burger div {
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: var(--clr-primary-1);
   margin: 5px;
+}
+input,
+textarea {
+  width: fit-content;
+  height: 40%;
+  background: transparent;
+  resize: none;
+  border-radius: var(--radius);
+  border: 1.5px solid black;
+  padding: 0.8rem;
+  color: var(--clr-black);
+  box-shadow: var(--light-shadow);
 }
 .nav-active {
   visibility: visible;
 }
 @media (max-width: 1024px) {
+  .nav-header {
+    gap: 5%;
+  }
   .links {
     width: 50%;
   }
 }
 @media screen and (max-width: 620px) {
+  .nav-header {
+    justify-content: space-between;
+  }
   .links {
     position: absolute;
     right: 0px;
@@ -82,5 +104,8 @@
   .burger {
     display: block;
     cursor: pointer;
+  }
+  input {
+    display: none;
   }
 }

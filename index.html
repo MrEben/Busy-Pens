@@ -7,6 +7,7 @@
     <title>Busy Pens</title>
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/nav.css" />
+    <link rel="stylesheet" href="./CSS/footer.css" />
   </head>
   <body>
     <section>
@@ -18,7 +19,14 @@
             <li><a href="a" target="_blank">Work</a></li>
             <li><a href="a" target="_blank">Projects</a></li>
           </ul>
-          <h2>Busy Pens</h2>
+          <div class="logo-img">
+            <img src="./images/log.png" alt="" />
+          </div>
+          <div className="navigate-input">
+            <form>
+              <input type="text" name="name" placeholder="Search..." required />
+            </form>
+          </div>
           <div id="burger" class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -29,7 +37,7 @@
       <header>
         <article>
           <div class="header-image">
-            <img src="./images/java-script.png" alt="picture here" />
+            <img src="./images/huy.png" alt="picture here" />
           </div>
           <div class="heading-title">
             <div class="header-label">
@@ -41,8 +49,12 @@
               consectetur?hjd wuyw uetiw ugtu
             </p>
             <div class="header-buttons">
-              <button class="btn btn-primary">order now</button>
-              <button class="btn">explore</button>
+              <a href="">
+                <button class="btn btn-primary">order now</button>
+              </a>
+              <a href="#products">
+                <button class="btn">explore</button>
+              </a>
             </div>
           </div>
         </article>
@@ -96,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="features">
+      <div id="features" class="features">
         <div class="ontop">
           <div class="features-heading">
             <h1>features</h1>
@@ -105,47 +117,125 @@
           <div class="features-qualities">
             <div class="each-feature">
               <div class="feature-image">
-                <img src="./images/img4.jpg" alt="" />
+                <img src="./images/img4.jpg" alt="image here" />
               </div>
-              <h4>waterproof</h4>
+              <h4>see</h4>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Eligendi, eos!
-              </p>
-            </div>
-            <div class="each-feature">
-              <div class="feature-image">
-                <img src="./images/img4.jpg" alt="" />
-              </div>
-              <h4>waterproof</h4>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Eligendi, eos!
-              </p>
-            </div>
-            <div class="each-feature">
-              <div class="feature-image">
-                <img src="./images/img4.jpg" alt="" />
-              </div>
-              <h4>waterproof</h4>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Eligendi, eos!
-              </p>
-            </div>
-            <div class="each-feature">
-              <div class="feature-image">
-                <img src="./images/img4.jpg" alt="" />
-              </div>
-              <h4>waterproof</h4>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Eligendi, eos!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+                consectetur.
               </p>
             </div>
           </div>
         </div>
       </div>
+      <!-- end of features section -->
+      <div id="products" class="products">
+        <div class="ontop">
+          <div class="products-heading">
+            <h1>popular products</h1>
+            <h2>busy pens</h2>
+          </div>
+          <div class="more-products">
+            <h3>View all</h3>
+          </div>
+          <div class="products-display">
+            <div class="each-product">
+              <div class="product-image">
+                <img src="./images/img4.jpg" alt="image here" />
+              </div>
+              <h3>see</h3>
+              <h2>$23.00</h2>
+              <button class="btn btn-primary">order now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="brands-message">
+        <div class="ontop">{</div>
+      </div>
+      <footer>
+        <div className="footer-links">
+          <div className="logo-message">
+            <h2>about us</h2>
+            <h5>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              optio enim fuga amet!
+            </h5>
+            <img src="./images/log.png" alt="" />
+          </div>
+
+          <div className="company-values">
+            <h2>contact us</h2>
+            <ul>
+              <li>
+                <a target="_blank" href=""> locate us at Choco avenue </a>
+              </li>
+              <li>
+                <a target="_blank" href=""> phone +233 65 617 7263 </a>
+              </li>
+              <li>
+                <a target="_blank" href=""> info@busyentertainment.com </a>
+              </li>
+            </ul>
+          </div>
+          <div className="company-footer-links">
+            <h2>permalinks</h2>
+            <ul>
+              <li>
+                <a target="_blank" href=""> busy access </a>
+              </li>
+              <li>
+                <a target="_blank" href=""> my account </a>
+              </li>
+              <li>
+                <a target="_blank" href=""> get artifacts </a>
+              </li>
+            </ul>
+          </div>
+          <div className="newsleter-sec">
+            <div className="droplinks">
+              <div key="{id}" className="dropdown">
+                <button class="dropbtn">s</button>
+                <div class="dropdown-content">999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                  <a href="#">{link1}</a>
+                  <a href="#">{link2}</a>
+                  <a href="#">{link3}</a>
+                </div>
+              </div>
+            </div>
+            <h2>newsletter</h2>
+            <h5>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              optio enim fuga amet!
+            </h5>
+            <form onClick="{subscribe}">
+              <input
+                className="user-email"
+                type="text"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <input
+                className="newsletter-btn"
+                type="submit"
+                value="Subscribe"
+              />
+            </form>
+          </div>
+        </div>
+        <div className="footer-copyrights">
+          <h5>
+            copyright &copy;2022 all rights reserved..this template was built by
+            <span> ebenezer</span>
+          </h5>
+          <ul className="social-icons">
+            <li key="{id}">
+              <a href="{url}">{icon}</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </section>
     <script type="module" src="./JS/script.js"></script>
     <script type="module" src="./JS/countdown.js"></script>

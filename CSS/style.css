@@ -18,8 +18,11 @@
   --spacing: 0.1rem;
   --radius: 0.5rem;
   --main-radius: 5rem 5rem 0 0;
+  --minor-radius: 3rem 3rem 0 0;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --btn-red-shadow: 0 5px 15px var(--clr-primary-6);
+  --btn-dark-shadow: 0 5px 10px var(--clr-primary-8);
   --container-width-lg: 82%;
   --container-width-md: 90%;
 }
@@ -107,6 +110,7 @@ h1 {
 .btn-primary {
   background: var(--clr-primary-2);
   color: var(--clr-primary-3);
+  box-shadow: var(--btn-red-shadow);
 }
 .btn-primary:hover {
   background: var(--clr-primary-3);
@@ -126,7 +130,7 @@ header {
   margin: auto;
 }
 header article {
-  padding-top: 3rem;
+  padding-top: 7%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10%;
@@ -149,6 +153,9 @@ header article {
 .header-buttons {
   display: flex;
   gap: 2rem;
+}
+.header-buttons a {
+  color: var(--clr-primary-1);
 }
 /* ========COUNTDOWN STYLES=========== */
 .countdown {
@@ -174,7 +181,8 @@ header article {
   margin-left: 0.9rem;
 }
 .promotion-head-tag h1,
-.features-heading h1 {
+.features-heading h1,
+.products-heading h1 {
   font-size: 3rem;
   font-weight: 600;
   font-weight: 1.3rem;
@@ -222,17 +230,22 @@ header article {
   margin-top: -7rem;
   background: var(--clr-primary-3);
 }
-.ontop {
+.features .ontop,
+.products .ontop,
+.brands-message .ontop {
   position: absolute;
+  left: 0;
   width: 100%;
-  height: 100%;
 }
-.features-heading {
+.features-heading,
+.products-heading {
   text-align: center;
   margin-top: 7%;
   text-transform: capitalize;
 }
-.features-qualities {
+.features-qualities,
+.products-display {
+  left: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: var(--container-width-lg);
@@ -240,12 +253,12 @@ header article {
   margin-top: 7%;
   margin: 6% auto;
 }
-.each-feature {
+.each-feature,
+.each-product {
   display: grid;
 }
 .each-feature h4 {
   margin-top: 6rem;
-  margin-bottom: 0;
   font-weight: 600;
   text-align: center;
   text-transform: capitalize;
@@ -254,13 +267,50 @@ header article {
   text-align: center;
   padding: 1rem 0;
 }
-.feature-image {
+.feature-image,
+.product-image {
   margin-left: 50%;
   transform: translate(-50%);
   height: 2rem;
   width: 6rem;
 }
-
+/* ========PRODUCTS STYLES=========== */
+.products {
+  z-index: 300;
+  background: var(--clr-white);
+  height: 100vh;
+  border-radius: var(--main-radius);
+}
+.more-products {
+  margin-right: 17%;
+}
+.more-products h3 {
+  text-align: right;
+  font-weight: 600;
+}
+.each-product h3 {
+  margin-top: 5rem;
+  text-align: center;
+}
+.each-product h2 {
+  text-align: center;
+  padding: 1rem;
+}
+.each-product .btn {
+  margin: auto;
+  padding: 0.9rem 2.7rem;
+  background: var(--clr-primary-1);
+  box-shadow: var(--btn-dark-shadow);
+}
+.each-product .btn:hover {
+  background: var(--clr-primary-3);
+}
+/* ========BRANDS MESSAGE STYLES=========== */
+.brands-message {
+  height: 70vh;
+  background: var(--clr-primary-2);
+  border-radius: var(--main-radius);
+}
 /* =====MEDIA QUERRIES(MEDIUM)====== */
 @media screen and (max-width: 1024px) {
   .container {
@@ -273,7 +323,8 @@ header article {
     font-size: 1.6rem;
   }
   header {
-    height: 60vh;
+    height: fit-content;
+    margin-bottom: 10vh;
   }
   header article {
     grid-template-columns: 45% 50%;
@@ -287,8 +338,10 @@ header article {
     font-weight: 800;
     font-size: 3.5rem;
   }
-  .features {
-    height: 50vh;
+
+  .features,
+  .products {
+    height: 48vh;
   }
   .countdown {
     height: 50vh;
@@ -297,19 +350,69 @@ header article {
 
 /* =====MEDIA QUERRIES(SMALL)====== */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
   h1 {
     font-size: 2.2rem;
     line-height: 1.1rem;
   }
+  header {
+    height: fit-content;
+    margin-bottom: 10vh;
+  }
   .header-image {
     display: none;
   }
+  .header-label h2 {
+    width: 80vw;
+    font-size: 2.3rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+  .header-label h1 {
+    width: 80vw;
+  }
+  .header-label span {
+    font-weight: 800;
+    font-size: 3.5rem;
+  }
+  .header-buttons .btn {
+    padding: 0.3rem 2.7rem;
+    display: inline;
+  }
+  .heading-title p {
+    width: 80vw;
+    padding: 1.5rem 0;
+  }
+  .promotion-head-tag h1,
+  .features-heading h1,
+  .products-heading h1 {
+    font-size: 2.5rem;
+    font-weight: 1.1rem;
+    letter-spacing: var(--spacing);
+    margin-bottom: 1rem;
+  }
+  .features-heading h1,
+  .products-heading h1 {
+    font-size: 2rem;
+    letter-spacing: normal;
+  }
+  .countdown,
+  .features,
+  .brands-message {
+    border-radius: var(--minor-radius);
+  }
+  .countdown {
+    height: fit-content;
+  }
   .countdown-content {
     grid-template-columns: 1fr;
+    gap: 5%;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
   }
-  .features-qualities {
+  .features-qualities,
+  .products-display {
     grid-template-columns: 1fr;
-    /* height: inherit; */
+    height: fit-content;
   }
 }
