@@ -14,10 +14,10 @@
       <nav>
         <div class="nav-header">
           <ul class="links">
-            <li><a href="a" target="_blank">Home</a></li>
-            <li><a href="a" target="_blank">About</a></li>
-            <li><a href="a" target="_blank">Work</a></li>
-            <li><a href="a" target="_blank">Projects</a></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#message">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#products">Products</a></li>
           </ul>
           <div class="logo-img">
             <img src="./images/log.png" alt="" />
@@ -35,7 +35,7 @@
         </div>
       </nav>
       <header>
-        <article>
+        <article id="header">
           <div class="header-image">
             <img src="./images/huy.png" alt="picture here" />
           </div>
@@ -148,94 +148,88 @@
               <button class="btn btn-primary">order now</button>
             </div>
           </div>
+          <div class="more-products ab">
+            <a href="#products"> </a>
+            <h3>View all</h3>
+          </div>
         </div>
       </div>
-      <div class="brands-message">
-        <div class="ontop">{</div>
+      <div id="message" class="brands-message">
+        <div class="ontop">
+          <div class="message-quote">
+            <span><h1>&OpenCurlyQuote;&OpenCurlyQuote;</h1></span>
+            <h1 class="quot">
+              The pen is mightier than the sword if the sword is very short, and
+              the pen is very sharp.
+            </h1>
+            <h2>Terry Pratchet</h2>
+          </div>
+          <div class="brand-message-img">
+            <img src="./images/pexels-karolina-grabowska-4476376.jpg" alt="" />
+          </div>
+        </div>
       </div>
       <footer>
-        <div className="footer-links">
-          <div className="logo-message">
-            <h2>about us</h2>
-            <h5>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              optio enim fuga amet!
-            </h5>
+        <div className="logo-message">
+          <div class="footer-img">
             <img src="./images/log.png" alt="" />
           </div>
-
-          <div className="company-values">
-            <h2>contact us</h2>
-            <ul>
-              <li>
-                <a target="_blank" href=""> locate us at Choco avenue </a>
-              </li>
-              <li>
-                <a target="_blank" href=""> phone +233 65 617 7263 </a>
-              </li>
-              <li>
-                <a target="_blank" href=""> info@busyentertainment.com </a>
-              </li>
-            </ul>
-          </div>
-          <div className="company-footer-links">
-            <h2>permalinks</h2>
-            <ul>
-              <li>
-                <a target="_blank" href=""> busy access </a>
-              </li>
-              <li>
-                <a target="_blank" href=""> my account </a>
-              </li>
-              <li>
-                <a target="_blank" href=""> get artifacts </a>
-              </li>
-            </ul>
-          </div>
-          <div className="newsleter-sec">
-            <div className="droplinks">
-              <div key="{id}" className="dropdown">
-                <button class="dropbtn">s</button>
-                <div class="dropdown-content">999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
-                  <a href="#">{link1}</a>
-                  <a href="#">{link2}</a>
-                  <a href="#">{link3}</a>
-                </div>
-              </div>
-            </div>
-            <h2>newsletter</h2>
-            <h5>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              optio enim fuga amet!
-            </h5>
-            <form onClick="{subscribe}">
-              <input
-                className="user-email"
-                type="text"
-                name="email"
-                placeholder="Email Address"
-                required
-              />
-              <input
-                className="newsletter-btn"
-                type="submit"
-                value="Subscribe"
-              />
-            </form>
-          </div>
         </div>
-        <div className="footer-copyrights">
+
+        <div className="company-values">
+          <h2>contact us</h2>
+          <ul>
+            <li>
+              <a target="_blank" href=""> locate us at Choco avenue </a>
+            </li>
+            <li>
+              <a target="_blank" href=""> phone +233 65 617 7263 </a>
+            </li>
+            <li>
+              <a target="_blank" href=""> info@busyentertainment.com </a>
+            </li>
+          </ul>
+        </div>
+        <div className="company-footer-links">
+          <h2>permalinks</h2>
+          <ul>
+            <li>
+              <a target="_blank" href=""> busy access </a>
+            </li>
+            <li>
+              <a target="_blank" href=""> my account </a>
+            </li>
+            <li>
+              <a target="_blank" href=""> get artifacts </a>
+            </li>
+          </ul>
+        </div>
+        <div className="newsleter-sec">
+          <h2>newsletter</h2>
+          <h5>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            optio enim fuga amet!
+          </h5>
+          <form onClick="{subscribe}">
+            <input
+              className="user-email"
+              type="text"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </footer>
+      <div className="footer-copyrights">
+        <div class="top">
           <h5>
             copyright &copy;2022 all rights reserved..this template was built by
             <span> ebenezer</span>
           </h5>
-          <ul className="social-icons">
-            <li key="{id}">
-              <a href="{url}">{icon}</a>
-            </li>
-          </ul>
         </div>
-      </footer>
+      </div>
     </section>
     <script type="module" src="./JS/script.js"></script>
     <script type="module" src="./JS/countdown.js"></script>

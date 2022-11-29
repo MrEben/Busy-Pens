@@ -45,7 +45,7 @@ Global Styles
 body {
   font-family: Arial, Helvetica, sans-serifs;
   color: var(--clr-black);
-  line-height: 1.7;
+  line-height: 1.5;
   background: var(--clr-black);
 }
 
@@ -157,6 +157,7 @@ header article {
 .header-buttons a {
   color: var(--clr-primary-1);
 }
+
 /* ========COUNTDOWN STYLES=========== */
 .countdown {
   z-index: 1;
@@ -194,7 +195,7 @@ header article {
   color: var(--clr-primary-5);
 }
 .colon {
-  margin-top: 0.3rem;
+  margin-top: 2%;
   color: var(--clr-primary-2);
 }
 .deadline-format {
@@ -258,7 +259,7 @@ header article {
   display: grid;
 }
 .each-feature h4 {
-  margin-top: 6rem;
+  margin-top: 35%;
   font-weight: 600;
   text-align: center;
   text-transform: capitalize;
@@ -274,13 +275,17 @@ header article {
   height: 2rem;
   width: 6rem;
 }
+.product-image {
+  width: 100%;
+}
 /* ========PRODUCTS STYLES=========== */
 .products {
   z-index: 300;
   background: var(--clr-white);
-  height: 100vh;
+  height: 105vh;
   border-radius: var(--main-radius);
 }
+
 .more-products {
   margin-right: 17%;
 }
@@ -288,8 +293,17 @@ header article {
   text-align: right;
   font-weight: 600;
 }
+.products-heading {
+  margin-top: 4%;
+}
+.products-display {
+  margin-top: 4%;
+}
+.ab {
+  display: none;
+}
 .each-product h3 {
-  margin-top: 5rem;
+  margin-top: 100%;
   text-align: center;
 }
 .each-product h2 {
@@ -307,9 +321,30 @@ header article {
 }
 /* ========BRANDS MESSAGE STYLES=========== */
 .brands-message {
-  height: 70vh;
+  height: 90vh;
   background: var(--clr-primary-2);
   border-radius: var(--main-radius);
+}
+.brands-message .ontop {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 4rem;
+  color: var(--clr-white);
+  height: 80%;
+  width: 100%;
+  margin: auto;
+}
+.message-quote span h1 {
+  font-size: 6rem;
+}
+.message-quote .quot {
+  margin-left: 5%;
+}
+.message-quote h2 {
+  margin-top: 13%;
+}
+.brand-message-img {
+  margin-top: 2rem;
 }
 /* =====MEDIA QUERRIES(MEDIUM)====== */
 @media screen and (max-width: 1024px) {
@@ -346,6 +381,22 @@ header article {
   .countdown {
     height: 50vh;
   }
+  .each-feature h4 {
+    margin-top: 30%;
+  }
+  .product-image {
+    width: 80%;
+  }
+  .each-product h3 {
+    margin-top: 80%;
+  }
+  .brands-message .ontop {
+    grid-template-columns: 1fr;
+  }
+  .brand-message-img {
+    margin-top: 0.5rem;
+    width: 90%;
+  }
 }
 
 /* =====MEDIA QUERRIES(SMALL)====== */
@@ -376,7 +427,7 @@ header article {
     font-size: 3.5rem;
   }
   .header-buttons .btn {
-    padding: 0.3rem 2.7rem;
+    padding: 0.7rem 2.3rem;
     display: inline;
   }
   .heading-title p {
@@ -410,9 +461,46 @@ header article {
     padding-top: 3rem;
     padding-bottom: 10rem;
   }
+  .promotion-head-tag {
+    margin-left: 0;
+  }
+  .promotion .ends {
+    margin-left: 0;
+  }
+  .deadline-format {
+    align-items: left;
+  }
+  .colon {
+    margin-top: 6%;
+  }
   .features-qualities,
   .products-display {
     grid-template-columns: 1fr;
     height: fit-content;
+  }
+  .products-heading {
+    margin-top: 10%;
+  }
+  .more-products:not(.ab) {
+    display: none;
+  }
+  .ab {
+    position: absolute;
+    display: inline;
+    margin-top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .brands-message {
+    min-height: fit-content;
+  }
+  .brands-message .ontop {
+    padding: 3rem 2rem;
+  }
+  .message-quote .quot {
+    line-height: 1.1;
+  }
+  .brand-message-img {
+    width: 100%;
   }
 }

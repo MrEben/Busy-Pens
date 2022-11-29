@@ -1,5 +1,5 @@
-// import { items } from '../JS/data';
-// console.log(features);
+import features from '../JS/data.js';
+import { products } from '../JS/data.js';
 
 const navSlide = () => {
   const burger = document.getElementById('burger');
@@ -10,10 +10,6 @@ const navSlide = () => {
 };
 navSlide();
 
-// const updateFeaturesHeight = () => {
-
-// };
-// window.addEventListener('resize', updateFeaturesHeight());
 const updateFeaturesHeight = () => {
   const featuresHeight = document.querySelector('.features');
   const productsHeight = document.querySelector('.products');
@@ -21,7 +17,6 @@ const updateFeaturesHeight = () => {
   const productsDisplayHeight = document.querySelector('.products-display');
   const qHeight = featureQualitiesHeight.getBoundingClientRect().height;
   const pHeight = productsDisplayHeight.getBoundingClientRect().height;
-  console.log(qHeight);
   const mQuery = window.matchMedia('(max-width:620px)');
   const handleResize = (e) => {
     if (e.matches) {
@@ -33,58 +28,6 @@ const updateFeaturesHeight = () => {
 };
 updateFeaturesHeight();
 
-const features = [
-  {
-    id: 1,
-    img: './images/download(1).jpg',
-    quality: 'Waterproof',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, non.',
-  },
-  {
-    id: 2,
-    img: './images/img4.jpg',
-    quality: 'long lasting',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, non.',
-  },
-  {
-    id: 3,
-    img: './images/download(2).jpg',
-    quality: 'easy to use',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, non.',
-  },
-  {
-    id: 4,
-    img: './images/download.jpg',
-    quality: 'silvery shine',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, non.',
-  },
-];
-const products = [
-  {
-    id: 1,
-    img: './images/download(1).jpg',
-    prodName: 'Bic',
-    price: 23.5,
-  },
-  {
-    id: 2,
-    img: './images/img4.jpg',
-    prodName: 'Befa',
-    price: 23.5,
-  },
-  {
-    id: 3,
-    img: './images/download(2).jpg',
-    prodName: 'Silk Blue',
-    price: 23.5,
-  },
-  {
-    id: 4,
-    img: './images/download.jpg',
-    prodName: 'Binf',
-    price: 23.5,
-  },
-];
 const feature = document.querySelector('.features-qualities');
 const product = document.querySelector('.products-display');
 window.addEventListener('DOMContentLoaded', () => {
@@ -104,7 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
   feature.innerHTML = displayFeatures;
   let displayProducts = products.map(function (item) {
     const { id, img, prodName, price } = item;
-    return `<div class="each-product">
+    return `<div id=${id} class="each-product">
               <div class="product-image">
                 <img src=${img} alt="image here" />
               </div>
