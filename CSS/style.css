@@ -203,8 +203,8 @@ header article {
   color: white;
   width: 5rem;
   display: grid;
-  text-align: center;
-  place-items: center;
+  /* text-align: center; */
+  /* place-items: center; */
 }
 
 .deadline-format span {
@@ -409,7 +409,12 @@ header article {
   header {
     height: fit-content;
     margin-bottom: 10vh;
+    position: relative;
   }
+  header article {
+    grid-template-columns: 1fr;
+  }
+
   .header-image {
     display: none;
   }
@@ -427,7 +432,7 @@ header article {
     font-size: 3.5rem;
   }
   .header-buttons .btn {
-    padding: 0.7rem 2.3rem;
+    padding: 0.7rem 2.1rem;
     display: inline;
   }
   .heading-title p {
@@ -441,6 +446,9 @@ header article {
     font-weight: 1.1rem;
     letter-spacing: var(--spacing);
     margin-bottom: 1rem;
+  }
+  .features {
+    height: 1130px;
   }
   .features-heading h1,
   .products-heading h1 {
@@ -461,6 +469,10 @@ header article {
     padding-top: 3rem;
     padding-bottom: 10rem;
   }
+  .countdown-display {
+    text-align: justify;
+    width: 90%;
+  }
   .promotion-head-tag {
     margin-left: 0;
   }
@@ -477,6 +489,9 @@ header article {
   .products-display {
     grid-template-columns: 1fr;
     height: fit-content;
+  }
+  .products {
+    height: 1928px;
   }
   .products-heading {
     margin-top: 10%;

@@ -7,6 +7,9 @@ const navSlide = () => {
   burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
   });
+  nav.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+  });
 };
 navSlide();
 
@@ -17,11 +20,12 @@ const updateFeaturesHeight = () => {
   const productsDisplayHeight = document.querySelector('.products-display');
   const qHeight = featureQualitiesHeight.getBoundingClientRect().height;
   const pHeight = productsDisplayHeight.getBoundingClientRect().height;
+  console.log(pHeight);
   const mQuery = window.matchMedia('(max-width:620px)');
   const handleResize = (e) => {
     if (e.matches) {
-      featuresHeight.style.height = `${qHeight * 5}px`;
-      productsHeight.style.height = `${pHeight * 5}px`;
+      // featuresHeight.style.height = `${qHeight * 5}px`;
+      // productsHeight.style.height = `${pHeight * 5}px`;
     }
   };
   mQuery.addListener(handleResize);

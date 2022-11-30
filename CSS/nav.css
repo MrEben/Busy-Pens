@@ -28,7 +28,7 @@
   height: 50px;
   display: flex;
   gap: 20%;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   padding: 2rem;
   overflow: hidden;
@@ -41,21 +41,25 @@
   font-size: 14px;
 }
 .links a {
-  color: var(--clr-primary-5);
+  color: var(--clr-primary-1);
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: 600;
 }
-.links a:hover {
-  color: var(--clr-primary-1);
+.links a:hover,
+.links a.activepage {
+  color: var(--clr-primary-2);
 }
 .logo-img {
   width: 6rem;
 }
-.burger {
+.burgerbtn {
   display: none;
 }
-.burger div {
+/* #burger{
+  display: none;
+} */
+.burgerbtn div {
   width: 30px;
   height: 3px;
   background-color: var(--clr-primary-1);
@@ -91,19 +95,33 @@ textarea {
   .links {
     position: absolute;
     right: 0px;
-    top: 4vh;
-    height: 80vh;
-    background-color: rgb(39, 39, 68);
+    top: 70px;
+    height: 60vh;
+    background-color: var(--clr-primary-1);
+    border-radius: var(--radius);
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    visibility: hidden;
-    transition: transform 0.5s ease-in;
+    justify-content: space-evenly;
+    width: 100%;
+    z-index: 999;
+    left: -100%;
+    transition: var(--transition);
   }
-  .burger {
+  .links a {
+    color: var(--clr-primary-3);
+  }
+
+  .burgerbtn {
     display: block;
     cursor: pointer;
+  }
+
+  .nav-active {
+    left: 0;
+  }
+  .hide-nav {
+    left: -100%;
   }
   nav input {
     display: none;

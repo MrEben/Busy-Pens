@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Busy Pens</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/nav.css" />
     <link rel="stylesheet" href="./CSS/footer.css" />
@@ -14,7 +18,7 @@
       <nav>
         <div class="nav-header">
           <ul class="links">
-            <li><a href="#header">Home</a></li>
+            <li><a class="activepage" href="#header">Home</a></li>
             <li><a href="#message">About</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#products">Products</a></li>
@@ -27,7 +31,8 @@
               <input type="text" name="name" placeholder="Search..." required />
             </form>
           </div>
-          <div id="burger" class="burger">
+
+          <div id="burger" class="burgerbtn">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
@@ -49,7 +54,7 @@
               consectetur?hjd wuyw uetiw ugtu
             </p>
             <div class="header-buttons">
-              <a href="">
+              <a href="#products">
                 <button class="btn btn-primary">order now</button>
               </a>
               <a href="#products">
@@ -111,7 +116,10 @@
       <div id="features" class="features">
         <div class="ontop">
           <div class="features-heading">
-            <h1>features</h1>
+            <i class="fa-regular fa-pen-nib"></i>
+            <h1>
+              <span> <i class="fas fa-pen-nib"></i> </span>features
+            </h1>
             <h2>busy pens</h2>
           </div>
           <div class="features-qualities">
@@ -132,7 +140,9 @@
       <div id="products" class="products">
         <div class="ontop">
           <div class="products-heading">
-            <h1>popular products</h1>
+            <h1>
+              <span> <i class="fa-regular fa-pen-nib"></i> </span>popular products
+            </h1>
             <h2>busy pens</h2>
           </div>
           <div class="more-products">
