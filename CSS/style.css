@@ -203,7 +203,6 @@ header article {
   color: white;
   width: 5rem;
   display: grid;
-  
 }
 
 .deadline-format span {
@@ -230,7 +229,7 @@ header article {
   margin-top: -7rem;
   background: var(--clr-primary-3);
 }
-.ontop{dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+.ontop {
   position: absolute;
   left: 0;
   width: 100%;
