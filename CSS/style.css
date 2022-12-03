@@ -203,8 +203,7 @@ header article {
   color: white;
   width: 5rem;
   display: grid;
-  /* text-align: center; */
-  /* place-items: center; */
+  
 }
 
 .deadline-format span {
@@ -231,9 +230,7 @@ header article {
   margin-top: -7rem;
   background: var(--clr-primary-3);
 }
-.features .ontop,
-.products .ontop,
-.brands-message .ontop {
+.ontop{dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
   position: absolute;
   left: 0;
   width: 100%;
@@ -455,6 +452,10 @@ header article {
     font-size: 2rem;
     letter-spacing: normal;
   }
+  .features-heading span,
+  .products-heading span {
+    color: var(--clr-primary-2);
+  }
   .countdown,
   .features,
   .brands-message {
@@ -507,7 +508,7 @@ header article {
     transform: translate(-50%);
   }
   .brands-message {
-    min-height: fit-content;
+    height: 115vh;
   }
   .brands-message .ontop {
     padding: 3rem 2rem;
