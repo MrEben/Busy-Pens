@@ -130,7 +130,7 @@ header {
   margin: auto;
 }
 header article {
-  padding-top: 7%;
+  padding-top: 3%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10%;
@@ -409,6 +409,7 @@ header article {
   }
   header article {
     grid-template-columns: 1fr;
+    padding-top: 7%;
   }
 
   .header-image {
@@ -507,13 +508,16 @@ header article {
     transform: translate(-50%);
   }
   .brands-message {
-    height: 115vh;
+    height: 105vh;
   }
   .brands-message .ontop {
     padding: 3rem 2rem;
   }
   .message-quote .quot {
     line-height: 1.1;
+  }
+  .message-quote h1 {
+    font-size: 1.7em;
   }
   .brand-message-img {
     width: 100%;

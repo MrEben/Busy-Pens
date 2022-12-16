@@ -56,9 +56,6 @@
 .burgerbtn {
   display: none;
 }
-/* #burger{
-  display: none;
-} */
 .burgerbtn div {
   width: 30px;
   height: 3px;

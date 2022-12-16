@@ -13,24 +13,23 @@ const navSlide = () => {
 };
 navSlide();
 
-const updateFeaturesHeight = () => {
-  const featuresHeight = document.querySelector('.features');
-  const productsHeight = document.querySelector('.products');
-  const featureQualitiesHeight = document.querySelector('.features-qualities');
-  const productsDisplayHeight = document.querySelector('.products-display');
-  const qHeight = featureQualitiesHeight.getBoundingClientRect().height;
-  const pHeight = productsDisplayHeight.getBoundingClientRect().height;
-  console.log(pHeight);
-  const mQuery = window.matchMedia('(max-width:620px)');
-  const handleResize = (e) => {
-    if (e.matches) {
-      // featuresHeight.style.height = `${qHeight * 5}px`;
-      // productsHeight.style.height = `${pHeight * 5}px`;
-    }
-  };
-  mQuery.addListener(handleResize);
-};
-updateFeaturesHeight();
+// const updateFeaturesHeight = () => {
+//   const featuresHeight = document.querySelector('.features');
+//   const productsHeight = document.querySelector('.products');
+//   const featureQualitiesHeight = document.querySelector('.features-qualities');
+//   const productsDisplayHeight = document.querySelector('.products-display');
+//   const qHeight = featureQualitiesHeight.getBoundingClientRect().height;
+//   const pHeight = productsDisplayHeight.getBoundingClientRect().height;
+//   const mQuery = window.matchMedia('(max-width:620px)');
+//   const handleResize = (e) => {
+//     if (e.matches) {
+//       featuresHeight.style.height = `${qHeight * 5}px`;
+//       productsHeight.style.height = `${pHeight * 5}px`;
+//     }
+//   };
+//   mQuery.addListener(handleResize);
+// };
+// updateFeaturesHeight();
 
 const feature = document.querySelector('.features-qualities');
 const product = document.querySelector('.products-display');
