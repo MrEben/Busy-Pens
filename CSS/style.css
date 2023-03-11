@@ -64,7 +64,7 @@ html {
   text-transform: capitalize;
 }
 section {
-  background: var(--background);
+  background: rgb(238, 241, 247);
   width: 95%;
   margin: 0 auto;
 }
@@ -130,7 +130,7 @@ header {
   margin: auto;
 }
 header article {
-  padding-top: 3%;
+  /* padding-top: 3%; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10%;
@@ -288,6 +288,11 @@ header article {
 .more-products h3 {
   text-align: right;
   font-weight: 600;
+  color: var(--clr-primary-2);
+  cursor: pointer;
+}
+.more-products h3:hover{
+  text-decoration: underline;
 }
 .products-heading {
   margin-top: 4%;
@@ -315,6 +320,7 @@ header article {
 .each-product .btn:hover {
   background: var(--clr-primary-3);
 }
+
 /* ========BRANDS MESSAGE STYLES=========== */
 .brands-message {
   height: 90vh;
@@ -372,10 +378,10 @@ header article {
 
   .features,
   .products {
-    height: 48vh;
+    height: 40vh;
   }
   .countdown {
-    height: 50vh;
+    height: 40vh;
   }
   .each-feature h4 {
     margin-top: 30%;
@@ -406,6 +412,7 @@ header article {
     height: fit-content;
     margin-bottom: 10vh;
     position: relative;
+    padding-top: 3%;
   }
   header article {
     grid-template-columns: 1fr;
@@ -449,8 +456,12 @@ header article {
   }
   .features-heading h1,
   .products-heading h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     letter-spacing: normal;
+  }
+  .features-heading h2,
+  .products-heading h2 {
+    font-size: 1.2rem;
   }
   .features-heading span,
   .products-heading span {
@@ -507,9 +518,9 @@ header article {
     left: 50%;
     transform: translate(-50%);
   }
-  .brands-message {
+  /* .brands-message {
     height: 105vh;
-  }
+  } */
   .brands-message .ontop {
     padding: 3rem 2rem;
   }
